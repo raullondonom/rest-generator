@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Created by https://www.gitignore.io/api/java,linux,macos,sonar,gradle,windows,eclipse,sonarqube,sublimetext,intellij+all,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=java,linux,macos,sonar,gradle,windows,eclipse,sonarqube,sublimetext,intellij+all,visualstudiocode
 
@@ -315,6 +316,11 @@ build/
 gradle/
 gradlew
 gradlew.bat
+=======
+.gradle
+**/build/
+!src/**/build/
+>>>>>>> 04419a642a0e7b57561a28ac41a3ffa595b3c571
 
 # Ignore Gradle GUI config
 gradle-app.setting
@@ -322,6 +328,7 @@ gradle-app.setting
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar
 
+<<<<<<< HEAD
 # Cache of project
 .gradletasknamecache
 
@@ -336,3 +343,16 @@ gradle-app.setting
 # HPROF
 # -----
 *.hprof
+=======
+# Avoid ignore Gradle wrappper properties
+!gradle-wrapper.properties
+
+# Cache of project
+.gradletasknamecache
+
+# Eclipse Gradle plugin generated files
+# Eclipse Core
+.project
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
+>>>>>>> 04419a642a0e7b57561a28ac41a3ffa595b3c571

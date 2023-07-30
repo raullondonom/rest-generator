@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Java Code Generator CLI for RESTful Applications with Quarkus
 
 Description:
@@ -18,3 +19,7 @@ The project's roadmap includes ambitious plans to expand its capabilities, such 
 With its focus on simplicity, efficiency, and adaptability, the Java Code Generator CLI aims to become an indispensable tool in the toolkit of Java developers seeking to build RESTful applications rapidly and effectively.
 
 Join us in this exciting journey as we shape the future of Java application development with Quarkus and beyond. Your contributions and feedback are always welcome!
+=======
+# example-quarkus-app
+Example Quarkus app
+>>>>>>> 04419a642a0e7b57561a28ac41a3ffa595b3c571
