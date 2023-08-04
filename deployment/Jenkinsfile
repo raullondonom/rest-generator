@@ -11,7 +11,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'gradle clean install'
+        sh 'gradle clean build'
       }
     }
     stage('SonarQube Analysis') {
@@ -23,7 +23,7 @@ pipeline {
     }
     stage('Generate jar') {
       steps {
-        sh 'gradle package'
+        sh 'gradle assemble'
       }
     }
   }
