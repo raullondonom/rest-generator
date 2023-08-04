@@ -10,15 +10,21 @@ pipeline {
       }
     }
     stage('Build') {
-      sh 'gradle clean install'
+      steps {
+        sh 'gradle clean install'
+      }
     }
     stage('SonarQube Analysis') {
-      withSonarQubeEnv() {
-        sh 'gradle sonar'
+      steps {
+        withSonarQubeEnv() {
+          sh 'gradle sonar'
+        }
       }
     }
     stage('Generate jar') {
-      sh 'gradle package'
+      steps {
+        sh 'gradle package'
+      }
     }
   }
 }
