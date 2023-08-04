@@ -5,18 +5,20 @@ pipeline {
   }
   stages {
     stage('SCM') {
-      checkout scm
+      steps {
+        checkout scm
+      }
     }
     stage('Build') {
       sh 'gradle clean install'
-    }
-    stage('Generate jar') {
-      sh 'gradle package'
     }
     stage('SonarQube Analysis') {
       withSonarQubeEnv() {
         sh 'gradle sonar'
       }
+    }
+    stage('Generate jar') {
+      sh 'gradle package'
     }
   }
 }
