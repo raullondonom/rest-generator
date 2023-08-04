@@ -1,16 +1,20 @@
-node {
+pipeline {
+  agent
+  tools {
+    gradle '8.2.1'
+  }
   stage('SCM') {
     checkout scm
   }
   stage('Build') {
-    sh "gradle clean install"
+    sh 'gradle clean install'
   }
   stage('Generate jar') {
-    sh "gradle package"
+    sh 'gradle package'
   }
   stage('SonarQube Analysis') {
     withSonarQubeEnv() {
-      sh "gradle sonar"
+      sh 'gradle sonar'
     }
   }
 }
