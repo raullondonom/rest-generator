@@ -3,18 +3,20 @@ pipeline {
   tools {
     gradle '8.2.1'
   }
-  stage('SCM') {
-    checkout scm
-  }
-  stage('Build') {
-    sh 'gradle clean install'
-  }
-  stage('Generate jar') {
-    sh 'gradle package'
-  }
-  stage('SonarQube Analysis') {
-    withSonarQubeEnv() {
-      sh 'gradle sonar'
+  stages {
+    stage('SCM') {
+      checkout scm
+    }
+    stage('Build') {
+      sh 'gradle clean install'
+    }
+    stage('Generate jar') {
+      sh 'gradle package'
+    }
+    stage('SonarQube Analysis') {
+      withSonarQubeEnv() {
+        sh 'gradle sonar'
+      }
     }
   }
 }
