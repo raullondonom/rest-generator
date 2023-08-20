@@ -1,7 +1,6 @@
 pluginManagement {
     repositories {
-        //mavenLocal()
-        //maven { url '...' }
+        mavenCentral()
         gradlePluginPortal()
     }
 }
@@ -14,3 +13,5 @@ include ':usecase'
 project(':app-service').projectDir = file('./applications/app-service')
 project(':model').projectDir = file('./domain/model')
 project(':usecase').projectDir = file('./domain/usecase')
+include ':repository'
+project(':repository').projectDir = file('./infrastructure/driven-adapters/repository')

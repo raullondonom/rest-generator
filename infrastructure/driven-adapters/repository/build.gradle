@@ -1,0 +1,7 @@
+dependencies {
+    implementation project(':model')
+    implementation 'org.springframework:spring-context'
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.6.0'
+
+    testImplementation 'com.h2database:h2'
+}
